@@ -1,4 +1,6 @@
 import Head from "next/head"
+import Header from "./Header"
+import Footer from "./Footer"
 
 export default function Layout({title, keywords, description, children}) {
     return (
@@ -14,7 +16,9 @@ export default function Layout({title, keywords, description, children}) {
                     content={keywords}
                     />
             </Head>
+            <Header />
             {children}
+            <Footer />
         </div>
     )
 }
